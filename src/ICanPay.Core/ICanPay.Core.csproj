@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Varorbc/ICanPay</PackageProjectUrl>
     <Title>ICanPay.Core</Title>
@@ -23,11 +23,9 @@
     <OutputPath>..\..\output\release\</OutputPath>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
-    <Reference Include="System.Web" />
-  </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.1" />
   </ItemGroup>
 
